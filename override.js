@@ -20,8 +20,8 @@ class _$StartupHandler$_ {
       this.installLibraries(search_name)
       this.startup_delay = 400
       this.triggerPending()
-      this.script_src = document.getElementsByTagName('head')[0]
-         .appendChild(document.createElement('script'))
+      tdocument.getElementsByTagName('head')[0]
+         .appendChild(document.createElement('script'))his.script_src =
       //document.getElementsByTagName('head')[0]
       //   .getElementsByTagName('script')
       //   .bind("DOMSubtreeModified", function () {
@@ -116,3 +116,17 @@ class _$StartupHandler$_ {
 
 
 
+//$handler = {
+//   libs:{
+//      search_name:['jquery-lang.js', 'lodash.js', 'showdown'],
+//      instances :['jQuery', '_', 'showdown']
+//   },
+//   onAppReady:function(){$webapp = new GoogleKeepMarkdownRenderingAddon()}
+//}
+
+$handler.handler = new _$StartupHandler$_(
+   search_name = $handler.libs.search_name,
+   instances   = $handler.libs.instances)
+$handler.onLibrariesInitialized(function (handler) {
+   $handler.onAppReady()
+})
